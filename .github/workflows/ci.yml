@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  run-lessons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      # lessons 3-4 need the pinned TF stack from requirements.txt —
+      # kept out of CI on purpose
+      - run: |
+          for n in 0 1 2 5 6 7 8; do
+            echo "== lesson_$n"; python lesson_$n.py
+          done

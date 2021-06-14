@@ -1,5 +1,7 @@
 # Advanced Python — lessons
 
+[![CI](https://github.com/sp41mer/AdvancedPython/actions/workflows/ci.yml/badge.svg)](https://github.com/sp41mer/AdvancedPython/actions/workflows/ci.yml)
+
 Nine standalone lessons, each a single runnable file.
 
 | Lesson | Topic |
